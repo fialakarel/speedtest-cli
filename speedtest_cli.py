@@ -25,6 +25,8 @@ import timeit
 import platform
 import threading
 
+from datetime import datetime
+
 __version__ = '0.3.4'
 
 # Some global variables we use
@@ -150,6 +152,35 @@ else:
     del builtins
 
 
+import logging
+
+FORMAT = '%(asctime)-15s %(message)s'
+logging.basicConfig(format=FORMAT)
+logger = logging.getLogger('logger')
+logger.warning('Logger started ...')
+
+
+
+    # My logging function
+def log(event):
+    global logger
+    logger.warning(event)
+    #print("[" + str(datetime.now()) + "] " + event)
+    pass
+
+
+
+def log2(event):
+    #global logger
+    #logger.warning(event)
+    #print("[" + str(datetime.now()) + "] " + event)
+    pass
+
+
+
+
+
+
 class SpeedtestCliServerListError(Exception):
     """Internal Exception class used to indicate to move on to the next
     URL for retrieving speedtest.net server details
@@ -161,6 +192,7 @@ def bound_socket(*args, **kwargs):
     """Bind socket to a specified source IP address"""
 
     global source
+    log("bound_socket: source ->" + str(source))
     sock = socket_socket(*args, **kwargs)
     sock.bind((source, 0))
     return sock
@@ -168,6 +200,8 @@ def bound_socket(*args, **kwargs):
 
 def distance(origin, destination):
     """Determine distance between 2 sets of [lat,lon] in km"""
+
+    log2("distance: origin -> " + str(origin) + " destination -> " + str(destination))
 
     lat1, lon1 = origin
     lat2, lon2 = destination
@@ -190,6 +224,7 @@ def build_user_agent():
 
     global user_agent
     if user_agent:
+        log("build_user_agent: (existed) user_agent -> " + str(user_agent) )
         return user_agent
 
     ua_tuple = (
@@ -200,6 +235,7 @@ def build_user_agent():
         'speedtest-cli/%s' % __version__
     )
     user_agent = ' '.join(ua_tuple)
+    log("build_user_agent: (created) user_agent -> " + str(user_agent) )
     return user_agent
 
 
@@ -209,6 +245,8 @@ def build_request(url, data=None, headers={}):
     This function automatically adds a User-Agent header to all requests
 
     """
+
+    log2("build_request: url -> " + str(url))
 
     if url[0] == ':':
         schemed_url = '%s%s' % (scheme, url)
@@ -225,6 +263,8 @@ def catch_request(request):
 
     """
 
+    log2("catch_request: request -> " + str(request))
+
     try:
         uh = urlopen(request)
         return uh, False
@@ -237,12 +277,14 @@ class FileGetter(threading.Thread):
     """Thread class for retrieving a URL"""
 
     def __init__(self, url, start):
+        log2("FileGetter.__init__: start -> " + str(start))
         self.url = url
         self.result = None
         self.starttime = start
         threading.Thread.__init__(self)
 
     def run(self):
+        log2("FileGetter.run: ")
         self.result = [0]
         try:
             if (timeit.default_timer() - self.starttime) <= 10:
@@ -260,21 +302,25 @@ class FileGetter(threading.Thread):
 def downloadSpeed(files, quiet=False):
     """Function to launch FileGetter threads and calculate download speeds"""
 
+    log2("downloadSpeed: files -> " + str(files))
+
     start = timeit.default_timer()
 
     def producer(q, files):
         for file in files:
+            log("downloadSpeed:producer: file -> " + str(file))
             thread = FileGetter(file, start)
             thread.start()
             q.put(thread, True)
-            if not quiet and not shutdown_event.isSet():
-                sys.stdout.write('.')
-                sys.stdout.flush()
+            #if not quiet and not shutdown_event.isSet():
+                #sys.stdout.write('.')
+                #sys.stdout.flush()
 
     finished = []
 
     def consumer(q, total_files):
         while len(finished) < total_files:
+            log("downloadSpeed:consumer: len(finished) -> " + str(len(finished)))
             thread = q.get(True)
             while thread.isAlive():
                 thread.join(timeout=0.1)
@@ -282,6 +328,7 @@ def downloadSpeed(files, quiet=False):
             del thread
 
     q = Queue(6)
+    log("downloadSpeed: starting producer and consumer for 'q = Queue(6)'")
     prod_thread = threading.Thread(target=producer, args=(q, files))
     cons_thread = threading.Thread(target=consumer, args=(q, len(files)))
     start = timeit.default_timer()
@@ -291,6 +338,7 @@ def downloadSpeed(files, quiet=False):
         prod_thread.join(timeout=0.1)
     while cons_thread.isAlive():
         cons_thread.join(timeout=0.1)
+    log("downloadSpeed: threads producer and consumer finished")
     return (sum(finished) / (timeit.default_timer() - start))
 
 
@@ -298,6 +346,7 @@ class FilePutter(threading.Thread):
     """Thread class for putting a URL"""
 
     def __init__(self, url, start, size):
+        log("FilePutter.__init__: url -> " + str(url) + " start -> " + str(start) + " size -> " + str(size))
         self.url = url
         chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         data = chars * (int(round(int(size) / 36.0)))
@@ -308,6 +357,7 @@ class FilePutter(threading.Thread):
         threading.Thread.__init__(self)
 
     def run(self):
+        log2("FilePutter.run: ")
         try:
             if ((timeit.default_timer() - self.starttime) <= 10 and
                     not shutdown_event.isSet()):
@@ -329,17 +379,19 @@ def uploadSpeed(url, sizes, quiet=False):
 
     def producer(q, sizes):
         for size in sizes:
+            log("uploadSpeed:producer: size -> " + str(size))
             thread = FilePutter(url, start, size)
             thread.start()
             q.put(thread, True)
-            if not quiet and not shutdown_event.isSet():
-                sys.stdout.write('.')
-                sys.stdout.flush()
+            #if not quiet and not shutdown_event.isSet():
+                #sys.stdout.write('.')
+                #sys.stdout.flush()
 
     finished = []
 
     def consumer(q, total_sizes):
         while len(finished) < total_sizes:
+            log("uploadSpeed:consumer: len(finished) -> " + str(len(finished)))
             thread = q.get(True)
             while thread.isAlive():
                 thread.join(timeout=0.1)
@@ -347,6 +399,7 @@ def uploadSpeed(url, sizes, quiet=False):
             del thread
 
     q = Queue(6)
+    log("uploadSpeed: starting producer and consumer for 'q = Queue(6)'")
     prod_thread = threading.Thread(target=producer, args=(q, sizes))
     cons_thread = threading.Thread(target=consumer, args=(q, len(sizes)))
     start = timeit.default_timer()
@@ -356,6 +409,7 @@ def uploadSpeed(url, sizes, quiet=False):
         prod_thread.join(timeout=0.1)
     while cons_thread.isAlive():
         cons_thread.join(timeout=0.1)
+    log("uploadSpeed: threads producer and consumer finished")
     return (sum(finished) / (timeit.default_timer() - start))
 
 
@@ -375,6 +429,8 @@ def getConfig():
     we are interested in
     """
 
+    log("getConfig: downloading xml")
+
     request = build_request('://www.speedtest.net/speedtest-config.php')
     uh, e = catch_request(request)
     if e:
@@ -388,6 +444,7 @@ def getConfig():
     if int(uh.code) != 200:
         return None
     uh.close()
+    log("getConfig: downloaded ... parsing")
     try:
         try:
             root = ET.fromstring(''.encode().join(configxml))
@@ -406,6 +463,7 @@ def getConfig():
     except SyntaxError:
         print_('Failed to parse speedtest.net configuration')
         sys.exit(1)
+    log("getConfig: parsed ...")
     del root
     del configxml
     return config
@@ -416,6 +474,8 @@ def closestServers(client, all=False):
     distance
     """
 
+    log("closestServers: ")
+
     urls = [
         '://www.speedtest.net/speedtest-servers-static.php',
         '://c.speedtest.net/speedtest-servers-static.php',
@@ -425,6 +485,7 @@ def closestServers(client, all=False):
     errors = []
     servers = {}
     for url in urls:
+        log("closestServers: processing url -> " + str(url))
         try:
             request = build_request(url)
             uh, e = catch_request(request)
@@ -450,6 +511,7 @@ def closestServers(client, all=False):
             except SyntaxError:
                 raise SpeedtestCliServerListError
             for server in elements:
+                log2("closestServers: get server -> " + str(server))
                 try:
                     attrib = server.attrib
                 except AttributeError:
@@ -478,10 +540,13 @@ def closestServers(client, all=False):
                '\n'.join(errors))
         sys.exit(1)
 
+    log("closestServers: downloaded ... now sorting")
+
     closest = []
     for d in sorted(servers.keys()):
         for s in servers[d]:
             closest.append(s)
+            log("closesServers: closest server -> " + str(s["host"]))
             if len(closest) == 5 and not all:
                 break
         else:
@@ -501,6 +566,8 @@ def getBestServer(servers):
     for server in servers:
         cum = []
         url = '%s/latency.txt' % os.path.dirname(server['url'])
+        #log("getBestServer: test latency for server -> " + str(server) + " url -> " + str(url))
+        log("getBestServer: test latency for server -> " + str(url))
         urlparts = urlparse(url)
         for i in range(0, 3):
             try:
@@ -523,6 +590,8 @@ def getBestServer(servers):
                 cum.append(3600)
             h.close()
         avg = round((sum(cum) / 6) * 1000, 3)
+        #log("getBestServer: server -> " + str(server) + " latency -> " + str(avg))
+        log("getBestServer: latency -> " + str(avg))
         results[avg] = server
     fastest = sorted(results.keys())[0]
     best = results[fastest]
