@@ -1,0 +1,266 @@
+2016-04-23 19:31:21,801 Logger started ...
+2016-04-23 19:31:21,810 build_user_agent: (created) user_agent -> Mozilla/5.0 (Linux; U; 64bit; en-us) Python/2.7.11+ (KHTML, like Gecko) speedtest-cli/0.3.4
+2016-04-23 19:31:21,811 getConfig: downloading xml
+2016-04-23 19:31:22,272 getConfig: downloaded ... parsing
+2016-04-23 19:31:22,274 getConfig: parsed ...
+2016-04-23 19:31:22,274 closestServers: 
+2016-04-23 19:31:22,274 closestServers: processing url -> ://www.speedtest.net/speedtest-servers-static.php
+2016-04-23 19:31:24,604 closestServers: downloaded ... now sorting
+2016-04-23 19:31:24,605 closesServers: closest server -> speedtest.vodafone.cz:8080
+2016-04-23 19:31:24,605 closesServers: closest server -> speedtest1.t-mobile.cz:8080
+2016-04-23 19:31:24,605 closesServers: closest server -> rychlost.nejtv.cz:8080
+2016-04-23 19:31:24,605 closesServers: closest server -> speedtest1.ispalliance.cz:8080
+2016-04-23 19:31:24,605 closesServers: closest server -> rychlost.giganet.cz:8080
+2016-04-23 19:31:24,612 getBestServer: test latency for server -> http://speedtest.vodafone.cz/speedtest/latency.txt
+2016-04-23 19:31:24,776 getBestServer: latency -> 27.225
+2016-04-23 19:31:24,776 getBestServer: test latency for server -> http://speedtest1.t-mobile.cz/speedtest/latency.txt
+2016-04-23 19:31:25,049 getBestServer: latency -> 45.424
+2016-04-23 19:31:25,050 getBestServer: test latency for server -> http://rychlost.nejtv.cz/speedtest/latency.txt
+2016-04-23 19:31:25,178 getBestServer: latency -> 21.388
+2016-04-23 19:31:25,178 getBestServer: test latency for server -> http://speedtest1.ispalliance.cz/speedtest/latency.txt
+2016-04-23 19:31:25,375 getBestServer: latency -> 32.755
+2016-04-23 19:31:25,376 getBestServer: test latency for server -> http://rychlost.giganet.cz/speedtest/latency.txt
+2016-04-23 19:31:25,627 getBestServer: latency -> 41.935
+2016-04-23 19:31:25,628 downloadSpeed: starting producer and consumer for 'q = Queue(6)'
+2016-04-23 19:31:25,628 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random350x350.jpg
+2016-04-23 19:31:25,629 downloadSpeed:consumer: len(finished) -> 0
+2016-04-23 19:31:25,629 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random350x350.jpg
+2016-04-23 19:31:25,630 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random350x350.jpg
+2016-04-23 19:31:25,631 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random350x350.jpg
+2016-04-23 19:31:25,632 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random500x500.jpg
+2016-04-23 19:31:25,632 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random500x500.jpg
+2016-04-23 19:31:25,632 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random500x500.jpg
+2016-04-23 19:31:25,633 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random500x500.jpg
+2016-04-23 19:31:27,998 downloadSpeed:consumer: len(finished) -> 1
+2016-04-23 19:31:27,998 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random750x750.jpg
+2016-04-23 19:31:28,206 downloadSpeed:consumer: len(finished) -> 2
+2016-04-23 19:31:28,206 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random750x750.jpg
+2016-04-23 19:31:28,307 downloadSpeed:consumer: len(finished) -> 3
+2016-04-23 19:31:28,307 downloadSpeed:consumer: len(finished) -> 4
+2016-04-23 19:31:28,308 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random750x750.jpg
+2016-04-23 19:31:28,308 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random750x750.jpg
+2016-04-23 19:31:32,214 downloadSpeed:consumer: len(finished) -> 5
+2016-04-23 19:31:32,214 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random1000x1000.jpg
+2016-04-23 19:31:32,322 downloadSpeed:consumer: len(finished) -> 6
+2016-04-23 19:31:32,322 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random1000x1000.jpg
+2016-04-23 19:31:35,627 downloadSpeed:consumer: len(finished) -> 7
+2016-04-23 19:31:35,628 downloadSpeed:consumer: len(finished) -> 8
+2016-04-23 19:31:35,628 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random1000x1000.jpg
+2016-04-23 19:31:35,629 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random1000x1000.jpg
+2016-04-23 19:31:42,703 downloadSpeed:consumer: len(finished) -> 9
+2016-04-23 19:31:42,703 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random1500x1500.jpg
+2016-04-23 19:31:44,221 downloadSpeed:consumer: len(finished) -> 10
+2016-04-23 19:31:44,221 downloadSpeed:consumer: len(finished) -> 11
+2016-04-23 19:31:44,221 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random1500x1500.jpg
+2016-04-23 19:31:44,221 downloadSpeed:consumer: len(finished) -> 12
+2016-04-23 19:31:44,222 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random1500x1500.jpg
+2016-04-23 19:31:44,223 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random1500x1500.jpg
+2016-04-23 19:31:47,390 downloadSpeed:consumer: len(finished) -> 13
+2016-04-23 19:31:47,391 downloadSpeed:consumer: len(finished) -> 14
+2016-04-23 19:31:47,391 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random2000x2000.jpg
+2016-04-23 19:31:47,391 downloadSpeed:consumer: len(finished) -> 15
+2016-04-23 19:31:47,391 downloadSpeed:consumer: len(finished) -> 16
+2016-04-23 19:31:47,391 downloadSpeed:consumer: len(finished) -> 17
+2016-04-23 19:31:47,391 downloadSpeed:consumer: len(finished) -> 18
+2016-04-23 19:31:47,391 downloadSpeed:consumer: len(finished) -> 19
+2016-04-23 19:31:47,391 downloadSpeed:consumer: len(finished) -> 20
+2016-04-23 19:31:47,392 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random2000x2000.jpg
+2016-04-23 19:31:47,392 downloadSpeed:consumer: len(finished) -> 21
+2016-04-23 19:31:47,392 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random2000x2000.jpg
+2016-04-23 19:31:47,392 downloadSpeed:consumer: len(finished) -> 22
+2016-04-23 19:31:47,393 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random2000x2000.jpg
+2016-04-23 19:31:47,393 downloadSpeed:consumer: len(finished) -> 23
+2016-04-23 19:31:47,393 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random2500x2500.jpg
+2016-04-23 19:31:47,393 downloadSpeed:consumer: len(finished) -> 24
+2016-04-23 19:31:47,393 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random2500x2500.jpg
+2016-04-23 19:31:47,394 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random2500x2500.jpg
+2016-04-23 19:31:47,394 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random2500x2500.jpg
+2016-04-23 19:31:47,394 downloadSpeed:consumer: len(finished) -> 25
+2016-04-23 19:31:47,394 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random3000x3000.jpg
+2016-04-23 19:31:47,394 downloadSpeed:consumer: len(finished) -> 26
+2016-04-23 19:31:47,395 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random3000x3000.jpg
+2016-04-23 19:31:47,395 downloadSpeed:consumer: len(finished) -> 27
+2016-04-23 19:31:47,395 downloadSpeed:consumer: len(finished) -> 28
+2016-04-23 19:31:47,395 downloadSpeed:consumer: len(finished) -> 29
+2016-04-23 19:31:47,395 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random3000x3000.jpg
+2016-04-23 19:31:47,395 downloadSpeed:consumer: len(finished) -> 30
+2016-04-23 19:31:47,396 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random3000x3000.jpg
+2016-04-23 19:31:47,396 downloadSpeed:consumer: len(finished) -> 31
+2016-04-23 19:31:47,396 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random3500x3500.jpg
+2016-04-23 19:31:47,396 downloadSpeed:consumer: len(finished) -> 32
+2016-04-23 19:31:47,396 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random3500x3500.jpg
+2016-04-23 19:31:47,397 downloadSpeed:consumer: len(finished) -> 33
+2016-04-23 19:31:47,397 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random3500x3500.jpg
+2016-04-23 19:31:47,397 downloadSpeed:consumer: len(finished) -> 34
+2016-04-23 19:31:47,398 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random3500x3500.jpg
+2016-04-23 19:31:47,398 downloadSpeed:consumer: len(finished) -> 35
+2016-04-23 19:31:47,399 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random4000x4000.jpg
+2016-04-23 19:31:47,399 downloadSpeed:consumer: len(finished) -> 36
+2016-04-23 19:31:47,399 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random4000x4000.jpg
+2016-04-23 19:31:47,399 downloadSpeed:consumer: len(finished) -> 37
+2016-04-23 19:31:47,399 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random4000x4000.jpg
+2016-04-23 19:31:47,400 downloadSpeed:consumer: len(finished) -> 38
+2016-04-23 19:31:47,400 downloadSpeed:producer: file -> http://rychlost.nejtv.cz/speedtest/random4000x4000.jpg
+2016-04-23 19:31:47,401 downloadSpeed:consumer: len(finished) -> 39
+2016-04-23 19:31:47,429 downloadSpeed: threads producer and consumer finished
+2016-04-23 19:31:47,430 uploadSpeed: starting producer and consumer for 'q = Queue(6)'
+2016-04-23 19:31:47,430 uploadSpeed:producer: size -> 250000
+2016-04-23 19:31:47,430 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:31:47,433 uploadSpeed:consumer: len(finished) -> 0
+2016-04-23 19:31:47,434 uploadSpeed:producer: size -> 250000
+2016-04-23 19:31:47,434 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:31:47,436 uploadSpeed:producer: size -> 250000
+2016-04-23 19:31:47,436 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:31:47,438 uploadSpeed:producer: size -> 250000
+2016-04-23 19:31:47,438 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:31:47,440 uploadSpeed:producer: size -> 250000
+2016-04-23 19:31:47,440 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:31:47,443 uploadSpeed:producer: size -> 250000
+2016-04-23 19:31:47,443 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:31:47,445 uploadSpeed:producer: size -> 250000
+2016-04-23 19:31:47,445 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:31:47,447 uploadSpeed:producer: size -> 250000
+2016-04-23 19:31:47,447 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:17,288 uploadSpeed:consumer: len(finished) -> 1
+2016-04-23 19:32:17,288 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:17,288 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:18,490 uploadSpeed:consumer: len(finished) -> 2
+2016-04-23 19:32:18,491 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:18,491 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:20,497 uploadSpeed:consumer: len(finished) -> 3
+2016-04-23 19:32:20,497 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:20,497 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,430 uploadSpeed:consumer: len(finished) -> 4
+2016-04-23 19:32:21,431 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,431 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,895 uploadSpeed:consumer: len(finished) -> 5
+2016-04-23 19:32:21,895 uploadSpeed:consumer: len(finished) -> 6
+2016-04-23 19:32:21,895 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,895 uploadSpeed:consumer: len(finished) -> 7
+2016-04-23 19:32:21,896 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,896 uploadSpeed:consumer: len(finished) -> 8
+2016-04-23 19:32:21,897 uploadSpeed:consumer: len(finished) -> 9
+2016-04-23 19:32:21,897 uploadSpeed:consumer: len(finished) -> 10
+2016-04-23 19:32:21,897 uploadSpeed:consumer: len(finished) -> 11
+2016-04-23 19:32:21,898 uploadSpeed:consumer: len(finished) -> 12
+2016-04-23 19:32:21,898 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,898 uploadSpeed:consumer: len(finished) -> 13
+2016-04-23 19:32:21,898 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,900 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,900 uploadSpeed:consumer: len(finished) -> 14
+2016-04-23 19:32:21,900 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,901 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,902 uploadSpeed:consumer: len(finished) -> 15
+2016-04-23 19:32:21,902 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,903 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,903 uploadSpeed:consumer: len(finished) -> 16
+2016-04-23 19:32:21,903 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,905 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,905 uploadSpeed:consumer: len(finished) -> 17
+2016-04-23 19:32:21,905 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,907 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,907 uploadSpeed:consumer: len(finished) -> 18
+2016-04-23 19:32:21,907 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,908 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,909 uploadSpeed:consumer: len(finished) -> 19
+2016-04-23 19:32:21,909 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,910 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,911 uploadSpeed:consumer: len(finished) -> 20
+2016-04-23 19:32:21,911 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,912 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,912 uploadSpeed:consumer: len(finished) -> 21
+2016-04-23 19:32:21,912 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,914 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,914 uploadSpeed:consumer: len(finished) -> 22
+2016-04-23 19:32:21,914 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,915 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,916 uploadSpeed:consumer: len(finished) -> 23
+2016-04-23 19:32:21,916 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,917 uploadSpeed:producer: size -> 250000
+2016-04-23 19:32:21,917 uploadSpeed:consumer: len(finished) -> 24
+2016-04-23 19:32:21,917 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 250000
+2016-04-23 19:32:21,919 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,919 uploadSpeed:consumer: len(finished) -> 25
+2016-04-23 19:32:21,919 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,922 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,922 uploadSpeed:consumer: len(finished) -> 26
+2016-04-23 19:32:21,922 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,925 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,926 uploadSpeed:consumer: len(finished) -> 27
+2016-04-23 19:32:21,926 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,929 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,929 uploadSpeed:consumer: len(finished) -> 28
+2016-04-23 19:32:21,929 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,932 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,932 uploadSpeed:consumer: len(finished) -> 29
+2016-04-23 19:32:21,932 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,935 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,936 uploadSpeed:consumer: len(finished) -> 30
+2016-04-23 19:32:21,936 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,939 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,939 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,942 uploadSpeed:consumer: len(finished) -> 31
+2016-04-23 19:32:21,942 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,942 uploadSpeed:consumer: len(finished) -> 32
+2016-04-23 19:32:21,942 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,945 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,945 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,948 uploadSpeed:consumer: len(finished) -> 33
+2016-04-23 19:32:21,948 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,948 uploadSpeed:consumer: len(finished) -> 34
+2016-04-23 19:32:21,948 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,951 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,951 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,954 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,954 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,957 uploadSpeed:consumer: len(finished) -> 35
+2016-04-23 19:32:21,957 uploadSpeed:consumer: len(finished) -> 36
+2016-04-23 19:32:21,957 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,957 uploadSpeed:consumer: len(finished) -> 37
+2016-04-23 19:32:21,957 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,960 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,960 uploadSpeed:consumer: len(finished) -> 38
+2016-04-23 19:32:21,960 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,963 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,963 uploadSpeed:consumer: len(finished) -> 39
+2016-04-23 19:32:21,963 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,966 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,966 uploadSpeed:consumer: len(finished) -> 40
+2016-04-23 19:32:21,966 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,968 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,969 uploadSpeed:consumer: len(finished) -> 41
+2016-04-23 19:32:21,969 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,971 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,972 uploadSpeed:consumer: len(finished) -> 42
+2016-04-23 19:32:21,972 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,974 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,975 uploadSpeed:consumer: len(finished) -> 43
+2016-04-23 19:32:21,975 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,977 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,978 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,980 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,980 uploadSpeed:consumer: len(finished) -> 44
+2016-04-23 19:32:21,980 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,981 uploadSpeed:consumer: len(finished) -> 45
+2016-04-23 19:32:21,983 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,983 uploadSpeed:consumer: len(finished) -> 46
+2016-04-23 19:32:21,983 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,986 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,986 uploadSpeed:consumer: len(finished) -> 47
+2016-04-23 19:32:21,986 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,989 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,989 uploadSpeed:consumer: len(finished) -> 48
+2016-04-23 19:32:21,989 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:21,992 uploadSpeed:producer: size -> 500000
+2016-04-23 19:32:21,992 uploadSpeed:consumer: len(finished) -> 49
+2016-04-23 19:32:21,992 FilePutter.__init__: url -> http://rychlost.nejtv.cz/speedtest/upload.php start -> 1461432707.43 size -> 500000
+2016-04-23 19:32:22,000 uploadSpeed: threads producer and consumer finished
+Retrieving speedtest.net configuration...
+Retrieving speedtest.net server list...
+Testing from O2 Czech Republic (85.71.135.82)...
+Selecting best server based on latency...
+Hosted by Nej TV a.s. (Prague) [3.57 km]: 21.388 ms
+Testing download speed
+Download: 4.20 Mbit/s
+Testing upload speed
+Upload: 0.23 Mbit/s
